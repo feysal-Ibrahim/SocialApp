@@ -8,6 +8,8 @@ urlpatterns =[
     url(r'^login$', views.login_view), # login
     url(r'^logout$', views.logout_view), # logout
     url(r'^signup$', views.signup), # signup
+    url( r'^ribbits$' , views.public ) ,  # public ribbits
+    url( r'^submit$' , views.submit ) ,  # submit new ribbit
 ]
 if settings.DEBUG:
     urlpatterns+=static( settings.MEDIA_URL , document_root=settings.MEDIA_ROOT )
