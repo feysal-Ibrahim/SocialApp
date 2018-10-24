@@ -1,7 +1,10 @@
+{% load bootstrap4 %}
+{% load static%}
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet/less" href="{{ STATIC_URL }}style.less">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{ STATIC_URL }}less.js"></script>
 </head>
 <body>
@@ -54,4 +57,44 @@
         </div>
     </footer>
 </body>
+<style>
+    .flash {
+    padding: 10px;
+    margin: 20px 0;
+    &.error {
+        background: #ffefef;
+        color: #4c1717;
+        border: 1px solid #4c1717;
+    }
+    &.warning {
+        background: #ffe4c1;
+        color: #79420d;
+        border: 1px solid #79420d;
+    }
+    &.notice {
+        background: #efffd7;
+        color: #8ba015;
+        border: 1px solid #8ba015;
+    }
+}
+input {
+    width: 179px;
+    &.error {
+        background: #ffefef;
+        color: #4c1717;
+        border: 1px solid #4c1717;
+    }
+}
+#content.wrapper.panel.right.{
+height: 433px;
+}
+footer {
+    div.wrapper {
+        img {
+            margin-right: 5px;
+        }
+    }
+}
+
+</style>
 </html>
