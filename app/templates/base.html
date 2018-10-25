@@ -1,28 +1,32 @@
 {% load bootstrap4 %}
 {% load static%}
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="stylesheet/less" href="{{ STATIC_URL }}style.less">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="{{ STATIC_URL }}less.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="wrapper">
-            <img src="{{ STATIC_URL }}gfx/logo.png">
-            <span>Twitter Clone</span>
+        <div class="container" style="color:white; margin:50px;">
             {% block login %}
             <a href="/">Home</a>
             <a href="/users/">Public Profiles</a>
             <a href="/users/{{ username }}">My Profile</a>
-            <a href="/ribbits">Public Ribbits</a>
+            <a href="/ribbits">Public post</a>
             <form action="/logout">
-                <input type="submit" id="btnLogOut" value="Log Out">
+                <button type="submit" style="margin-left:1500px;"   id="btnLogOut" value="Log Out">logout</button>
             </form>
             {% endblock %}
         </div>
-    </header>
     <div id="content">
         <div class="wrapper">
             {% block flash %}
@@ -45,56 +49,432 @@
             {% endblock %}
         </div>
     </div>
+    <hr>
+    <br>
+    <br>
     <footer>
-        <div class="wrapper">
-            Ribbit - A Twitter Clone Tutorial
-            <a href="http://net.tutsplus.com">
-                <img src="{{ STATIC_URL }}gfx/logo-nettuts.png">
-            </a>
-            <a href="http://www.djangoproject.com/">
-                <img src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." />
-            </a>
+                        <div class="row">
+                <div class="col-md-6 col-sm-6">
+                <div class="blog-entries">
+              <div class="item same-height-row clearfix">
+                <div style="height:40px" class="image same-height-always">
+                <a href="">
+                	<img src="https://scontent.fnbo7-1.fna.fbcdn.net/v/t1.0-9/44131166_2087177611596184_7420327062138781696_n.jpg?_nc_cat=101&_nc_ht=scontent.fnbo7-1.fna&oh=dbe264ec3c23f57dcce92ff3b78e5413&oe=5C401090" style="border-radius: 50% ;" class=" img-circle" alt="" width="50px" height="50px">
+                </a>
+
+               </div>
+                    <h4>Feisal Ibrahim</h4>
+
+                  <section><p>name is Feisal and I'm a Full Stack Developer who loves to create with code and color awesome web apps. I started my web journey around 2017 with HTML and CSS. During the years I went through a several Online Courses on w3 school and code academy.My goal was to get better and better in Code, I tried out a few languages like PHP, Ruby, Python and a few Front-end frameworks. It is good to know a basic understanding of how the web and Databases work but I know now my place is in Full Stack .I created this site and my social pages to shear with you all my projects and experience, if you like it I would love to hear from you.. </p></section>
+
+                                       <hr class="hidden-md hidden-lg hidden-sm">
+</div> </div>
+                </div>
+                <!-- /.col-md-3 -->
+
+
+
+                <div class="col-md-4 col-md-offset-2 col-sm-4 ">
+
+                    <h4>Contact</h4>
+
+                    <p><strong>Feisal Ibrah&igrave;m </strong>
+                        <br>(UD)
+                        <strong>Kenya</strong>
+                        <br><strong>0713027855</strong>
+                        <br><strong>addictivefazman@gmail.com</strong>
+                    </p>
+
+
+                </div>
+                <!-- /.col-md-3 -->
+
+
+
+
+                           </div>
+            <!-- /.container -->
+        </footer>
+        <!-- /#footer -->
+
+        <!-- *** FOOTER END *** -->
+
+        <!-- *** COPYRIGHT ***
+_________________________________________________________ -->
+
+        <div id="copyright">
+            <div class="container-fluid">
+                <div class="col-md-12 col-sm-6">
+                    <p class="pull-left">&copy; 2016. Feisal Ibrah&igrave;m</p>
+                    <p class="pull-right">Have Questions for the website?please visit the <a href=""> FAQ</a></p>
+                    <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :) -->
+                    </p>
+
+                </div>
+            </div>
         </div>
-    </footer>
+        <!-- /#copyright -->
+
+        <!-- *** COPYRIGHT END *** -->
+
+
+
+    </div>
+
+
+    </div>
 </body>
 <style>
-    .flash {
-    padding: 10px;
-    margin: 20px 0;
-    &.error {
-        background: #ffefef;
-        color: #4c1717;
-        border: 1px solid #4c1717;
-    }
-    &.warning {
-        background: #ffe4c1;
-        color: #79420d;
-        border: 1px solid #79420d;
-    }
-    &.notice {
-        background: #efffd7;
-        color: #8ba015;
-        border: 1px solid #8ba015;
-    }
+.container a{
+color:white;
 }
-input {
-    width: 179px;
-    &.error {
-        background: #ffefef;
-        color: #4c1717;
-        border: 1px solid #4c1717;
-    }
-}
-#content.wrapper.panel.right.{
-height: 433px;
-}
-footer {
-    div.wrapper {
-        img {
-            margin-right: 5px;
-        }
-    }
+    /**
+* Daily UI :: 001
+* Design a sign up page, modal, form, app screen, etc.
+**/
+/**
+* Style Declarations
+**/
+html, body {
 }
 
+body {
+  background: url("https://res.cloudinary.com/exards/image/upload/v1447941004/Majestic_mountains_1920x1080-blue_rr4ucd.jpg");
+  background-size: cover;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+#page-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+#page-wrapper #modal-wrapper {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#modal {
+  margin: 0 auto;
+  box-shadow: 0px 34px 27px rgba(0, 0, 0, 0.32), inset 0 0 1px rgba(0, 0, 0, 0.2);
+  max-width: 430px;
+}
+
+.box {
+  background: #3b8686;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2I4Njg2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc5YmQ5YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: linear-gradient(135deg, #3b8686 0%, #79bd9a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3B8686', endColorstr='#FF79BD9A',GradientType=1 );
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+.box .box-header {
+  font-size: 1.75em;
+  font-weight: 300;
+  color: white;
+  text-align: left;
+  margin: 0 0 36px;
+}
+.box svg {
+  fill: white;
+}
+
+button.proceed {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+  background: #3b8686;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2I4Njg2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBiNDg2YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: linear-gradient(135deg, #3b8686 0%, #0b486b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3B8686', endColorstr='#FF0B486B',GradientType=1 );
+  border: 0;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+button.proceed i {
+  font-size: .8em;
+}
+
+#login-form {
+  padding: 40px;
+}
+#login-form input {
+  border: 1px solid #ddd;
+  color: #79bd9a;
+}
+#login-form label {
+  color: #777777;
+}
+
+#register-form input {
+  border: 1px solid white;
+  color: #eeeeee;
+}
+#register-form label {
+  color: white;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 20px 0 6px;
+  font-family: 'Proxima Nova', sans-serif;
+}
+label:first-child {
+  margin-top: 0;
+}
+label .tip {
+  float: right;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #3B8686;
+  font-weight: bold;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background: transparent;
+}
+
+#toggle-tabs {
+  display: table;
+  width: 100%;
+}
+#toggle-tabs .tab {
+  font-size: 1em;
+  display: table-cell;
+  width: 50%;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+#toggle-tabs .tab#toggle-login {
+  color: #79bd9a;
+}
+#toggle-tabs .tab#toggle-register {
+  color: white;
+  background: #79bd9a;
+}
+
+#branding-small {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+#branding-small svg {
+  fill: white;
+}
+
+
+footer {
+  background: #555555;
+  color: #999999;
+
+}
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+  color: #eeeeee;
+}
+footer h4 {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+#footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+#footer ul a {
+  color: #999999;
+}
+#footer ul a:hover {
+  color: #c27baa;
+  text-decoration: none;
+}
+
+#footer .social a {
+  color: #555555;
+  font-size: 25px;
+  margin: 0 10px 0 0;
+}
+#footer .social a:hover {
+  color: #c27baa;
+}
+#copyright {
+  background: #333;
+  color: #ccc;
+  padding: 8px 0;
+  font-size: 12px;
+}
+#copyright p {
+  margin: 0;
+}
+@media (max-width: 991px) {
+  #copyright p {
+    float: none !important;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+[data-animate] {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+#style-switch-button {
+  position: fixed;
+  top: 100px;
+  left: 0px;
+  border-radius: 0;
+}
+#style-switch {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+  position: fixed;
+  top: 140px;
+  left: 0;
+  background: #fff;
+  border: solid 1px #eeeeee;
+}
+@media (max-width: 991px) {
+  #style-switch-button {
+    display: none;
+  }
+  #style-switch {
+    display: none;
+  }
+}
+/* Original Boostrap template overwrite */
+/* breadcrumbs */
+.breadcrumb {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  background-color: none;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-affixed-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    max-height: 200px;
+  }
+}
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 1px;
+}
+@media (min-width: 768px) {
+  .navbar-static-top {
+    border-radius: 0;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+  }
+
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    line-height: 20px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-image: none;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .navbar-nav > li > a {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-left {
+    float: left !important;
+  }
+  .navbar-right {
+    float: right !important;
+  }
+}
+
+/* responsive utilities */
+@media (max-width: 767px) {
+  .text-center-xs {
+    text-align: center !important;
+  }
+  .text-center-xs img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .text-center-sm {
+    text-align: center !important;
+  }
+  .text-center-sm img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+ </style>
 </style>
 </html>

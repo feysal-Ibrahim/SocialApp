@@ -6,11 +6,11 @@ from app.models import Ribbit
 
 
 class UserCreateForm( UserCreationForm ):
-    email=forms.EmailField( required=True , widget=forms.widgets.TextInput( attrs={'placeholder': 'Email'} ) )
+    email=forms.EmailField( required=True , widget=forms.widgets.TextInput( attrs={'placeholder': 'What is your email?'} ) )
     first_name=forms.CharField( required=True , widget=forms.widgets.TextInput( attrs={'placeholder': 'First Name'} ) )
     last_name=forms.CharField( required=True , widget=forms.widgets.TextInput( attrs={'placeholder': 'Last Name'} ) )
-    username=forms.CharField( widget=forms.widgets.TextInput( attrs={'placeholder': 'Username'} ) )
-    password1=forms.CharField( widget=forms.widgets.PasswordInput( attrs={'placeholder': 'Password'} ) )
+    username=forms.CharField( widget=forms.widgets.TextInput( attrs={'placeholder': 'Give yourself a username'} ) )
+    password1=forms.CharField( widget=forms.widgets.PasswordInput( attrs={'placeholder': 'Choose a password'} ) )
     password2=forms.CharField( widget=forms.widgets.PasswordInput( attrs={'placeholder': 'Password Confirmation'} ) )
 
     def is_valid(self):

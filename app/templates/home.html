@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block login %}
+    <div class="container-fluid">
+         <div class="col-md-6" style="float:right">
+
     <form action="/login" method="post">{% csrf_token %}
         {% for field in auth_form %}
         {{ field }}
         {% endfor %}
         <input type="submit" id="btnLogIn" value="Log In">
     </form>
+         </div>
 {% endblock %}
 
 {% block content %}
@@ -16,16 +20,34 @@
     {{ user_form.non_field_errors }}
 </div>
 {% endif %}
-<img src="{{ STATIC_URL}}gfx/frog.jpg">
-<div class="panel right">
-    <h1>New to Ribbit?</h1>
-    <p>
+    <h1>New to Fam?</h1>
+             <div id="page-wrapper">
+      <div id="modal-wrapper">
+        <div id="modal">
+          <div id="cards">
+            <div class="card" id="signup">
+              <div class="box">
         <form action="/signup" method="post">{% csrf_token %}
+
             {% for field in user_form %}
             {{ field }}
             {% endfor %}
             <input type="submit" value="Create Account">
         </form>
-    </p>
 </div>
+    </div>
+          </div>
+        </div>
+      </div>
+             </div>
+         </div>
+    </div>
+<br>
+<br>
+<style>
+    form{
+    background-color:white;
+    }
+
+</style>
 {% endblock %}
