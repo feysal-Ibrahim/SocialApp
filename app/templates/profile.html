@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="panel-default">
-        <h1>Create a Ribbit</h1>
+     <div class="col-md-6" style="float:right;">
+       <h1>Create a Status</h1>
         <p>
             <form action="/submit" method="post">
             {% for field in ribbit_form %}{% csrf_token %}
             {{ field }}
             {% endfor %}
             <input type="hidden" value="{{ next_url }}" name="next_url">
-            <input type="submit" value="Ribbit!">
+                <button type="submit" value="Ribbit!">submit</button>
             </form>
         </p>
     </div>

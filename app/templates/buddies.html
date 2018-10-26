@@ -13,7 +13,7 @@
 >
 
 
-        <h1>Create a Ribbit</h1>
+        <h1>Create a Status</h1>
         <p>
             <form action="/submit" method="post">
             {% for field in ribbit_form %}{% csrf_token %}
@@ -25,7 +25,7 @@
         </p>
     </div>
     <div class="col-md-6" style="float:left;">
-        <h1>Buddies' Ribbits</h1>
+        <h1>Buddies' Status</h1>
         {% for ribbit in ribbits %}
         <div class="ribbitWrapper">
             <a href="/users/{{ ribbit.user.username }}">
